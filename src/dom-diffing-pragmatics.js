@@ -2,10 +2,10 @@
  * @Author: Gilles Coomans
  */
 
-import difPragmas from 'babelute-html-dom-diffing-pragmatics';
+import difPragmas from 'htsl-dom-diffing-pragmatics';
 import routes from './routes';
 
-import htmlLexicon from 'babelute-html-lexicon';
+import htmlLexicon from 'htsl-lexicon';
 htmlLexicon.addAtoms(['router']);
 
 // example : h.router(location, routes, ?props);

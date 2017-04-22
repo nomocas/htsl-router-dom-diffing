@@ -1,10 +1,10 @@
-# babelute-html-router
+# htsl-router
 
 
 ## Routes Example
 
 ```javascript
-import router from 'babelute-html-router/src/routes';
+import router from 'htsl-router/src/routes';
 
 const routes = router.compil({
 	'/': () => h.home(),
