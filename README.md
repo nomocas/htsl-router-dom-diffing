@@ -1,27 +1,31 @@
 # htsl-router
 
+Router for [HTSL](https://github.com/nomocas/htsl-lexicon).
+
+Only for dom-diffing for the moment.
+
+work in progress.
 
 ## Routes Example
 
+
 ```javascript
-import router from 'htsl-router/src/routes';
+import router from 'htsl-router';
+import htmlLexicon from 'htsl-lexicon';
+
+const h = htmlLexicon.initializer();
 
 const routes = router.compil({
 	'/': () => h.home(),
-	'/facet/:slugname': (params) => h.facet(params),
-	'/admin/?:page': (params) => h.admin(params),
-	'/me': () => h.facet({}),
-	'/my-madein': (params) => h.mymadein(params),
-	'/reset-password': (params) => h.resetPassword(params),
-	'/:domain/?:facet/?:document': (params) => h.browser(params)
+	'/admin/?:page': (props, params) => h.admin(props, params),
+	'/reset-password': (props, params) => h.resetPassword(props, params),
+	...
 });
 
-h.router(location, routes, { myProps: 1 })...
 
+h.router(locationObject, routes, { myProps: 1 })...
 
 ```
-
-
 
 
 ## History Binding Example

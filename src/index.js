@@ -3,6 +3,9 @@
  */
 
 import pathToRegexp from 'path-to-regexp';
+import htmlLexicon from 'htsl-lexicon';
+htmlLexicon.addAtoms(['router']);
+// example : h.router(location, routes, ?props);
 
 function compil(routes) {
 	const arr = [];
@@ -23,14 +26,12 @@ function matchURI(route, uri) {
 }
 
 function matchRoute(location, routes) {
-	console.log('match route  : ', location);
 	let found = null;
 	routes.some((route) => {
 		const uri = location.error ? '/error' : location.pathname;
 		const params = matchURI(route, uri);
 		return params && (found = { route, params });
 	});
-	console.log('route match ? : ', found);
 	return found;
 }
 
