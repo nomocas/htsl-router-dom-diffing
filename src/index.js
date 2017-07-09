@@ -4,6 +4,8 @@
 
 import difPragmas from 'htsl-dom-diffing-pragmatics';
 import router from 'htsl-router-core';
+import htmlLexicon from 'htsl-lexicon';
+htmlLexicon.addAtoms(['router']);
 
 difPragmas.renderActions.router = function($tag, lexem /* args : location, router, props */ , component, frag) {
 	const matched = lexem.matched = router.matchRoute(lexem.args[0], lexem.args[1]);
@@ -37,10 +39,7 @@ difPragmas.removeActions.router = function($tag, lexem /* args : location, route
 		difPragmas.remove($tag, lexem.developed, component);
 };
 
-export default {
-	difPragmas,
-	router
-};
+export default router;
 
 /**
  ***************************** String Pragmas
