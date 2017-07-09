@@ -29,8 +29,8 @@
   "author": "Gilles Coomans",
   "license": "MIT",
   "dependencies": {
-    "babelute": "^0.6.0",
-    "htsl-dom-diffing-pragmatics": "^0.3.0",
+    "htsl-dom-diffing-pragmatics": "^0.3.1",
+    "htsl-lexicon": "^0.2.10",
     "path-to-regexp": "^1.7.0"
   },
   "devDependencies": {
