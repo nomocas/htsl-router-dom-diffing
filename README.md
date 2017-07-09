@@ -1,16 +1,14 @@
-# htsl-router
+# htsl-router-dom-diffing
 
-Router for [HTSL](https://github.com/nomocas/htsl-lexicon).
+Dom-diffing router engine for [HTSL](https://github.com/nomocas/htsl-lexicon).
 
-Only for dom-diffing for the moment.
-
-work in progress.
+Really alpha state.
 
 ## Routes Example
 
-
+Definition :
 ```javascript
-import router from 'htsl-router';
+import router from 'htsl-router-core';
 import htmlLexicon from 'htsl-lexicon';
 
 const h = htmlLexicon.initializer();
@@ -23,8 +21,18 @@ const routes = router.compil({
 });
 
 
-h.router(locationObject, routes, { myProps: 1 })...
+const mySentence = h.div(
+	h.router(locationObject, routes, { myProps: 1 })
+	...
+);
+```
 
+Rendering :
+```javascript
+import differ from 'htsl-dom-diffing-pragmatics';
+import 'htsl-router-dom-diffing';
+
+mySentence.$render(document.getElementById('...'));
 ```
 
 
