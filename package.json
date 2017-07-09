@@ -1,6 +1,6 @@
 {
   "name": "htsl-router-dom-diffing",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Dom-diffing router engine for HTSL",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
